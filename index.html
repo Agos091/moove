@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mooove Removals — Fast, Reliable & Affordable Removals Australia-Wide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:#0a1521;color:#e8eef4;font-family:'Barlow',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+::selection{background:#84cc16;color:#0a1521;}
+a{color:inherit;text-decoration:none;}
+input,select,textarea,button{font-family:inherit;}
+
+@keyframes mv-dash{from{background-position:0 0;}to{background-position:80px 0;}}
+@keyframes mv-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes mv-pulse{0%,100%{box-shadow:0 0 0 0 rgba(132,204,22,.45);}70%{box-shadow:0 0 0 16px rgba(132,204,22,0);}}
+
+details[open] [data-chev]{transform:rotate(45deg) !important;}
+
+/* Mobile */
+@media(max-width:880px){
+  .desktop-nav{display:none !important;}
+  .hamburger{display:flex !important;}
+  .hero-grid{grid-template-columns:1fr !important;}
+  .hero-art{order:-1 !important;}
+  .split{grid-template-columns:1fr !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header style="position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(10,21,33,.82);border-bottom:1px solid rgba(255,255,255,.07);">
+  <div style="max-width:1220px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="#top" style="display:flex;align-items:center;gap:12px;">
+      <span style="display:flex;align-items:center;gap:7px;">
+        <span style="display:inline-block;width:30px;height:22px;background:linear-gradient(135deg,#a3e635,#65a30d);clip-path:polygon(0 100%,55% 100%,100% 0,45% 0);"></span>
+        <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:30px;letter-spacing:-.5px;line-height:.8;color:#fff;">MO<span style="color:#84cc16;">OO</span>VE</span>
+      </span>
+      <span style="font-family:'Barlow Condensed';font-weight:700;font-size:11px;letter-spacing:5px;color:#7d93a8;align-self:flex-end;padding-bottom:3px;">REMOVALS</span>
+    </a>
+
+    <nav class="desktop-nav" style="display:flex;align-items:center;gap:30px;">
+      <a href="#services" style="font-weight:600;font-size:15px;color:#c2d0dc;">Services</a>
+      <a href="#how" style="font-weight:600;font-size:15px;color:#c2d0dc;">How it works</a>
+      <a href="#areas" style="font-weight:600;font-size:15px;color:#c2d0dc;">Areas</a>
+      <a href="#gallery" style="font-weight:600;font-size:15px;color:#c2d0dc;">Gallery</a>
+      <a href="#reviews" style="font-weight:600;font-size:15px;color:#c2d0dc;">Reviews</a>
+      <a href="#faq" style="font-weight:600;font-size:15px;color:#c2d0dc;">FAQ</a>
+    </nav>
+
+    <div class="desktop-nav" style="display:flex;align-items:center;gap:16px;">
+      <a href="tel:+61410342539" style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:19px;color:#fff;white-space:nowrap;">0410 342 539</a>
+      <a href="#quote" style="background:linear-gradient(135deg,#a3e635,#65a30d);color:#0a1521;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:17px;letter-spacing:.3px;padding:11px 22px;border-radius:8px;white-space:nowrap;box-shadow:0 6px 18px rgba(132,204,22,.3);">FREE QUOTE</a>
+    </div>
+
+    <button class="hamburger" onclick="document.getElementById('mobile-nav').style.display=document.getElementById('mobile-nav').style.display==='block'?'none':'block'" aria-label="Menu" style="display:none;flex-direction:column;gap:5px;background:transparent;border:0;cursor:pointer;padding:8px;">
+      <span style="width:26px;height:3px;background:#84cc16;border-radius:2px;display:block;"></span>
+      <span style="width:26px;height:3px;background:#84cc16;border-radius:2px;display:block;"></span>
+      <span style="width:26px;height:3px;background:#84cc16;border-radius:2px;display:block;"></span>
+    </button>
+  </div>
+
+  <div id="mobile-nav" style="display:none;border-top:1px solid rgba(255,255,255,.07);background:#0c1928;padding:8px 24px 18px;">
+    <a href="#services" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.05);">Services</a>
+    <a href="#how" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.05);">How it works</a>
+    <a href="#areas" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.05);">Areas</a>
+    <a href="#gallery" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.05);">Gallery</a>
+    <a href="#reviews" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.05);">Reviews</a>
+    <a href="#faq" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.05);">FAQ</a>
+    <a href="#quote" onclick="document.getElementById('mobile-nav').style.display='none'" style="display:block;margin-top:10px;text-align:center;background:linear-gradient(135deg,#a3e635,#65a30d);color:#0a1521;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:18px;padding:13px;border-radius:8px;">GET A FREE QUOTE</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="top" style="position:relative;background:radial-gradient(900px 500px at 78% -8%,rgba(132,204,22,.18),transparent 60%),radial-gradient(700px 600px at -5% 110%,rgba(132,204,22,.10),transparent 55%),#0a1521;overflow:hidden;">
+  <div style="position:absolute;top:0;right:0;width:38%;height:100%;background:linear-gradient(135deg,rgba(132,204,22,.10),transparent 60%);clip-path:polygon(35% 0,100% 0,100% 100%,0 100%);pointer-events:none;"></div>
+  <div style="max-width:1220px;margin:0 auto;padding:64px 24px 76px;position:relative;">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(132,204,22,.12);border:1px solid rgba(132,204,22,.3);padding:7px 14px;border-radius:999px;margin-bottom:22px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#84cc16;box-shadow:0 0 10px #84cc16;"></span>
+          <span style="font-weight:700;font-size:12.5px;letter-spacing:2px;color:#bef264;text-transform:uppercase;">Australia-Wide Removals</span>
+        </div>
+        <h1 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(46px,7vw,82px);line-height:.92;letter-spacing:-1px;margin:0 0 18px;text-transform:uppercase;color:#fff;">We Mooove You<br><span style="color:#84cc16;">Faster.</span> Stress-free.</h1>
+        <p style="font-size:clamp(16px,2.2vw,19px);line-height:1.55;color:#aebccb;max-width:520px;margin:0 0 30px;">Home &amp; office removals, interstate relocations and furniture logistics done right — by a crew that turns up on time and treats your stuff like it's our own.</p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px;">
+          <a href="#quote" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#a3e635,#65a30d);color:#0a1521;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:21px;letter-spacing:.4px;padding:15px 30px;border-radius:10px;box-shadow:0 12px 30px rgba(132,204,22,.32);">GET A FREE QUOTE →</a>
+          <a href="https://wa.me/61410342539" target="_blank" style="display:inline-flex;align-items:center;gap:11px;background:transparent;border:2px solid rgba(255,255,255,.2);color:#fff;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:21px;padding:13px 26px;border-radius:10px;">
+            <span style="display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;background:#25D366;border-radius:50%;color:#fff;font-weight:900;font-size:13px;">✓</span>
+            WHATSAPP US
+          </a>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:22px;">
+          <div style="display:flex;align-items:center;gap:9px;"><span style="color:#84cc16;font-size:20px;font-weight:800;">✓</span><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">FAST</span></div>
+          <div style="width:1px;background:rgba(255,255,255,.12);"></div>
+          <div style="display:flex;align-items:center;gap:9px;"><span style="color:#84cc16;font-size:20px;font-weight:800;">✓</span><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">RELIABLE</span></div>
+          <div style="width:1px;background:rgba(255,255,255,.12);"></div>
+          <div style="display:flex;align-items:center;gap:9px;"><span style="color:#84cc16;font-size:20px;font-weight:800;">✓</span><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">AFFORDABLE</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" style="position:relative;">
+        <div style="position:absolute;inset:-18px -18px auto auto;width:120px;height:120px;background:linear-gradient(135deg,#a3e635,#65a30d);border-radius:18px;transform:rotate(-8deg);z-index:0;opacity:.18;"></div>
+        <div style="position:relative;z-index:1;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 70px rgba(0,0,0,.5);background:#0c1928;">
+          <img src="images/photo1.jpg" alt="Mooove Removals truck loaded and ready" style="width:100%;height:380px;display:block;object-fit:cover;">
+        </div>
+        <div style="position:absolute;z-index:2;left:-14px;bottom:-22px;background:#0c1928;border:1px solid rgba(132,204,22,.35);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px rgba(0,0,0,.45);animation:mv-float 5s ease-in-out infinite;">
+          <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:40px;color:#84cc16;line-height:1;">10+</span>
+          <span style="font-weight:600;font-size:13.5px;line-height:1.25;color:#c2d0dc;">years moving<br>Aussie families</span>
+        </div>
+        <div style="position:absolute;z-index:2;right:-12px;top:18px;background:#0c1928;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:11px 15px;box-shadow:0 14px 32px rgba(0,0,0,.45);">
+          <div style="color:#fbbf24;font-size:15px;letter-spacing:2px;">★★★★★</div>
+          <div style="font-weight:600;font-size:12px;color:#aebccb;margin-top:2px;">Rated by 300+ movers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:6px;background:repeating-linear-gradient(135deg,#84cc16 0 24px,#0a1521 24px 48px);animation:mv-dash 2.2s linear infinite;background-size:80px 100%;opacity:.85;"></div>
+</section>
+
+<!-- ===================== TRUST BAR ===================== -->
+<div style="background:#0c1928;border-bottom:1px solid rgba(255,255,255,.06);">
+  <div style="max-width:1220px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;">
+    <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:18px;color:#7d93a8;text-transform:uppercase;letter-spacing:1px;">Fully insured &amp; covered</span>
+    <span style="font-weight:600;color:#8ba0b3;font-size:15px;">Local crews</span>
+    <span style="font-weight:600;color:#8ba0b3;font-size:15px;">No hidden fees</span>
+    <span style="font-weight:600;color:#8ba0b3;font-size:15px;">Free quotes</span>
+    <span style="font-weight:600;color:#8ba0b3;font-size:15px;">7 days a week</span>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" style="background:#0a1521;padding:84px 24px;">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">What we do</span>
+      <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(34px,5vw,56px);text-transform:uppercase;margin:8px 0 0;color:#fff;letter-spacing:-.5px;">Removals · Relocations · Logistics</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;">
+
+      <div style="position:relative;background:linear-gradient(180deg,#0e1f30,#0c1928);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:30px;overflow:hidden;transition:border-color .2s,transform .2s;" onmouseenter="this.style.borderColor='rgba(132,204,22,.5)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)'">
+        <div style="position:absolute;top:0;right:0;width:90px;height:90px;background:linear-gradient(135deg,rgba(132,204,22,.25),transparent);clip-path:polygon(100% 0,0 0,100% 100%);"></div>
+        <div style="width:54px;height:54px;border-radius:12px;background:rgba(132,204,22,.14);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px;">📦</div>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:26px;text-transform:uppercase;margin:0 0 10px;color:#fff;">Home &amp; Office Removals</h3>
+        <p style="color:#aebccb;line-height:1.55;font-size:15.5px;margin:0 0 16px;">Studios to 5-bedroom homes and full office fit-outs. Careful packing, wrapping and loading by an experienced local crew.</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Packing &amp; unpacking</li>
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Disassembly &amp; reassembly</li>
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Blankets &amp; protection supplied</li>
+        </ul>
+      </div>
+
+      <div style="position:relative;background:linear-gradient(180deg,#0e1f30,#0c1928);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:30px;overflow:hidden;transition:border-color .2s,transform .2s;" onmouseenter="this.style.borderColor='rgba(132,204,22,.5)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)'">
+        <div style="position:absolute;top:0;right:0;width:90px;height:90px;background:linear-gradient(135deg,rgba(132,204,22,.25),transparent);clip-path:polygon(100% 0,0 0,100% 100%);"></div>
+        <div style="width:54px;height:54px;border-radius:12px;background:rgba(132,204,22,.14);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px;">🚚</div>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:26px;text-transform:uppercase;margin:0 0 10px;color:#fff;">Interstate Relocations</h3>
+        <p style="color:#aebccb;line-height:1.55;font-size:15.5px;margin:0 0 16px;">Moving Sydney to Melbourne, Brisbane to the Gold Coast or anywhere between — backloading options to keep costs down.</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Door-to-door across AU</li>
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Flexible backloading rates</li>
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Live updates en route</li>
+        </ul>
+      </div>
+
+      <div style="position:relative;background:linear-gradient(180deg,#0e1f30,#0c1928);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:30px;overflow:hidden;transition:border-color .2s,transform .2s;" onmouseenter="this.style.borderColor='rgba(132,204,22,.5)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)'">
+        <div style="position:absolute;top:0;right:0;width:90px;height:90px;background:linear-gradient(135deg,rgba(132,204,22,.25),transparent);clip-path:polygon(100% 0,0 0,100% 100%);"></div>
+        <div style="width:54px;height:54px;border-radius:12px;background:rgba(132,204,22,.14);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px;">🛋️</div>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:26px;text-transform:uppercase;margin:0 0 10px;color:#fff;">Furniture Logistics</h3>
+        <p style="color:#aebccb;line-height:1.55;font-size:15.5px;margin:0 0 16px;">Single-item deliveries, store pick-ups, marketplace buys and bulky pieces moved up stairs and through tight spaces.</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Single &amp; two-man jobs</li>
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Pick-up &amp; delivery</li>
+          <li style="display:flex;gap:9px;color:#c2d0dc;font-size:14.5px;"><span style="color:#84cc16;font-weight:800;">✓</span> Stairs &amp; tight access</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section id="how" style="background:linear-gradient(180deg,#0c1928,#0a1521);padding:84px 24px;border-top:1px solid rgba(255,255,255,.05);">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div style="margin-bottom:50px;">
+      <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">Simple as 1·2·3·4</span>
+      <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(34px,5vw,56px);text-transform:uppercase;margin:8px 0 0;color:#fff;letter-spacing:-.5px;">How the move works</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;">
+      <div style="position:relative;padding:28px 24px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07);">
+        <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:60px;color:rgba(132,204,22,.22);line-height:.8;">01</span>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:22px;text-transform:uppercase;margin:6px 0 8px;color:#fff;">Get your quote</h3>
+        <p style="color:#aebccb;font-size:15px;line-height:1.5;margin:0;">Send your details via the form or WhatsApp. We reply fast with a clear, fixed price.</p>
+      </div>
+      <div style="position:relative;padding:28px 24px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07);">
+        <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:60px;color:rgba(132,204,22,.22);line-height:.8;">02</span>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:22px;text-transform:uppercase;margin:6px 0 8px;color:#fff;">Lock the date</h3>
+        <p style="color:#aebccb;font-size:15px;line-height:1.5;margin:0;">Pick a day that suits you — 7 days a week. We confirm the crew and truck size.</p>
+      </div>
+      <div style="position:relative;padding:28px 24px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07);">
+        <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:60px;color:rgba(132,204,22,.22);line-height:.8;">03</span>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:22px;text-transform:uppercase;margin:6px 0 8px;color:#fff;">We do the heavy lifting</h3>
+        <p style="color:#aebccb;font-size:15px;line-height:1.5;margin:0;">We wrap, load and transport with care — you relax while we handle it all.</p>
+      </div>
+      <div style="position:relative;padding:28px 24px;border-radius:14px;background:rgba(132,204,22,.06);border:1px solid rgba(132,204,22,.3);">
+        <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:60px;color:rgba(132,204,22,.4);line-height:.8;">04</span>
+        <h3 style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:22px;text-transform:uppercase;margin:6px 0 8px;color:#fff;">Settle in</h3>
+        <p style="color:#aebccb;font-size:15px;line-height:1.5;margin:0;">We place everything where you want it. No stress, no surprises — just done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AREAS ===================== -->
+<section id="areas" style="background:#0a1521;padding:84px 24px;">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div class="split" style="display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;">
+      <div>
+        <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">Where we move</span>
+        <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(34px,5vw,52px);text-transform:uppercase;margin:8px 0 16px;color:#fff;letter-spacing:-.5px;">Servicing all of Australia</h2>
+        <p style="color:#aebccb;font-size:16.5px;line-height:1.6;margin:0 0 24px;max-width:480px;">Based locally and moving nationwide. Whether it's across the suburb or across the country, our crews have you covered.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;">
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-weight:600;font-size:14.5px;color:#dbe6f0;">Sydney</span>
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-weight:600;font-size:14.5px;color:#dbe6f0;">Melbourne</span>
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-weight:600;font-size:14.5px;color:#dbe6f0;">Brisbane</span>
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-weight:600;font-size:14.5px;color:#dbe6f0;">Gold Coast</span>
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-weight:600;font-size:14.5px;color:#dbe6f0;">Canberra</span>
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-weight:600;font-size:14.5px;color:#dbe6f0;">Newcastle</span>
+          <span style="padding:9px 16px;border-radius:999px;background:rgba(132,204,22,.12);border:1px solid rgba(132,204,22,.35);font-weight:700;font-size:14.5px;color:#bef264;">+ Australia-wide</span>
+        </div>
+        <a href="#quote" style="display:inline-flex;align-items:center;gap:9px;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:19px;color:#84cc16;">Check my area &amp; get a price →</a>
+      </div>
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 60px rgba(0,0,0,.45);">
+        <img src="images/photo5.jpg" alt="Route map Paddington to Wollongong" style="width:100%;height:360px;display:block;object-fit:cover;">
+        <div style="position:absolute;left:18px;bottom:18px;background:rgba(10,21,33,.88);backdrop-filter:blur(6px);border:1px solid rgba(132,204,22,.3);border-radius:12px;padding:12px 16px;">
+          <div style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:24px;color:#84cc16;line-height:1;">Same-day</div>
+          <div style="font-weight:600;font-size:13px;color:#c2d0dc;">local bookings available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery" style="background:linear-gradient(180deg,#0c1928,#0a1521);padding:84px 24px;border-top:1px solid rgba(255,255,255,.05);">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;margin-bottom:36px;">
+      <div>
+        <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">On the job</span>
+        <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(34px,5vw,56px);text-transform:uppercase;margin:8px 0 0;color:#fff;letter-spacing:-.5px;">Recent mooves</h2>
+      </div>
+      <p style="color:#7d93a8;font-size:13.5px;max-width:320px;margin:0;">Photos from our recent jobs across Australia.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));grid-auto-rows:200px;gap:14px;">
+      <img src="images/photo2.jpg" alt="Sofa wrapped and protected" style="width:100%;height:100%;grid-row:span 2;display:block;object-fit:cover;border-radius:14px;">
+      <img src="images/photo1.jpg" alt="Truck loaded with furniture" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
+      <img src="images/photo3.jpg" alt="Table wrapped for moving" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
+      <img src="images/photo4.jpg" alt="Mattress wrapped for transport" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
+      <img src="images/photo8.jpg" alt="Inside the moving truck" style="width:100%;height:100%;grid-column:span 2;display:block;object-fit:cover;border-radius:14px;">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" style="background:#0a1521;padding:84px 24px;">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:46px;">
+      <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">Don't take our word for it</span>
+      <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(34px,5vw,56px);text-transform:uppercase;margin:8px 0 0;color:#fff;letter-spacing:-.5px;">What movers say</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;">
+
+      <div style="background:linear-gradient(180deg,#0e1f30,#0c1928);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;">
+        <div style="color:#fbbf24;font-size:16px;letter-spacing:2px;margin-bottom:14px;">★★★★★</div>
+        <p style="color:#dbe6f0;font-size:16px;line-height:1.6;margin:0 0 20px;">"Turned up early, wrapped everything and had our 3-bedroom moved before lunch. Not a single scratch. Could not recommend Mooove more."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed';font-weight:900;color:#0a1521;font-size:18px;">SK</span>
+          <div><div style="font-weight:700;color:#fff;font-size:15px;">Sarah K.</div><div style="color:#7d93a8;font-size:13px;">Bondi, NSW</div></div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(180deg,#0e1f30,#0c1928);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;">
+        <div style="color:#fbbf24;font-size:16px;letter-spacing:2px;margin-bottom:14px;">★★★★★</div>
+        <p style="color:#dbe6f0;font-size:16px;line-height:1.6;margin:0 0 20px;">"Interstate move from Sydney to Brisbane and the price was unreal. Great communication the whole way. These guys are the real deal."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed';font-weight:900;color:#0a1521;font-size:18px;">DM</span>
+          <div><div style="font-weight:700;color:#fff;font-size:15px;">Daniel M.</div><div style="color:#7d93a8;font-size:13px;">Brisbane, QLD</div></div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(180deg,#0e1f30,#0c1928);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;">
+        <div style="color:#fbbf24;font-size:16px;letter-spacing:2px;margin-bottom:14px;">★★★★★</div>
+        <p style="color:#dbe6f0;font-size:16px;line-height:1.6;margin:0 0 20px;">"Booked a couch pick-up last minute over WhatsApp and it was sorted same day. Friendly, fast and fairly priced. Will use again."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed';font-weight:900;color:#0a1521;font-size:18px;">LT</span>
+          <div><div style="font-weight:700;color:#fff;font-size:15px;">Leah T.</div><div style="color:#7d93a8;font-size:13px;">Melbourne, VIC</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUOTE FORM ===================== -->
+<section id="quote" style="position:relative;background:radial-gradient(700px 400px at 85% 0%,rgba(132,204,22,.16),transparent 60%),linear-gradient(180deg,#0c1928,#0a1521);padding:84px 24px;border-top:1px solid rgba(255,255,255,.05);overflow:hidden;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="split" style="display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start;">
+      <div>
+        <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">No obligation</span>
+        <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(36px,5.5vw,60px);text-transform:uppercase;margin:8px 0 18px;color:#fff;letter-spacing:-.5px;line-height:.95;">Get a free<br><span style="color:#84cc16;">quoooote</span></h2>
+        <p style="color:#aebccb;font-size:16.5px;line-height:1.6;margin:0 0 28px;">Tell us a few details and we'll send a clear, fixed price — usually within the hour. Prefer to chat? Hit us on WhatsApp.</p>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <a href="tel:+61410342539" style="display:flex;align-items:center;gap:14px;">
+            <span style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-size:20px;">📞</span>
+            <span><span style="display:block;font-size:12px;color:#7d93a8;font-weight:600;letter-spacing:1px;">CALL US</span><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:21px;color:#fff;">(+61) 0410 342 539</span></span>
+          </a>
+          <a href="mailto:officemooove@gmail.com" style="display:flex;align-items:center;gap:14px;">
+            <span style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-size:20px;">✉️</span>
+            <span><span style="display:block;font-size:12px;color:#7d93a8;font-weight:600;letter-spacing:1px;">EMAIL US</span><span style="font-weight:700;font-size:17px;color:#fff;">officemooove@gmail.com</span></span>
+          </a>
+          <a href="https://instagram.com/wemoooveyou" target="_blank" style="display:flex;align-items:center;gap:14px;">
+            <span style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-size:20px;">📷</span>
+            <span><span style="display:block;font-size:12px;color:#7d93a8;font-weight:600;letter-spacing:1px;">FOLLOW US</span><span style="font-weight:700;font-size:17px;color:#fff;">@wemoooveyou</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="quote-form-container" style="background:#0e1f30;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.4);">
+        <form id="quoteForm" style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">YOUR NAME</span><input id="f-name" placeholder="Jane Doe" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">PHONE</span><input id="f-phone" placeholder="0410 000 000" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">MOVING FROM</span><input id="f-from" placeholder="Suburb / postcode" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">MOVING TO</span><input id="f-to" placeholder="Suburb / postcode" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">PREFERRED DATE</span><input id="f-date" type="date" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;color-scheme:dark;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">MOVE SIZE</span><select id="f-size" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"><option>Few items / furniture</option><option>Studio / 1 Bedroom</option><option selected>2 Bedroom</option><option>3 Bedroom</option><option>4+ Bedroom</option><option>Office / commercial</option></select></label>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">DETAILS (stairs, lift, heavy items...)</span><textarea id="f-details" rows="3" placeholder="Anything we should know?" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;resize:vertical;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></textarea></label>
+          <button type="submit" style="margin-top:4px;display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#a3e635,#65a30d);color:#0a1521;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:22px;letter-spacing:.4px;padding:15px;border:0;border-radius:10px;cursor:pointer;box-shadow:0 12px 28px rgba(132,204,22,.3);">SEND VIA WHATSAPP →</button>
+          <p style="text-align:center;color:#7d93a8;font-size:12.5px;margin:2px 0 0;">No spam. We only use your details to give you a quote.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" style="background:#0a1521;padding:84px 24px;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:42px;">
+      <span style="font-weight:700;font-size:13px;letter-spacing:3px;color:#84cc16;text-transform:uppercase;">Good to know</span>
+      <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(34px,5vw,56px);text-transform:uppercase;margin:8px 0 0;color:#fff;letter-spacing:-.5px;">Frequently asked</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <details style="background:#0e1f30;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;list-style:none;"><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">How do I get a quote?</span><span data-chev style="flex:none;width:14px;height:14px;border-right:2px solid #84cc16;border-bottom:2px solid #84cc16;transform:rotate(-45deg);transition:transform .2s;"></span></summary>
+        <div style="padding:0 22px 20px;color:#aebccb;font-size:15.5px;line-height:1.6;">Fill in the quote form above or message us on WhatsApp with your pick-up and drop-off suburbs, move size and date. We'll reply with a clear fixed price — usually within the hour during business times.</div>
+      </details>
+      <details style="background:#0e1f30;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;list-style:none;"><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">Are you insured?</span><span data-chev style="flex:none;width:14px;height:14px;border-right:2px solid #84cc16;border-bottom:2px solid #84cc16;transform:rotate(-45deg);transition:transform .2s;"></span></summary>
+        <div style="padding:0 22px 20px;color:#aebccb;font-size:15.5px;line-height:1.6;">Yes — we carry transit and public liability cover, and every job is handled by trained movers. Ask us about goods-in-transit options for higher-value items.</div>
+      </details>
+      <details style="background:#0e1f30;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;list-style:none;"><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">Do you move interstate?</span><span data-chev style="flex:none;width:14px;height:14px;border-right:2px solid #84cc16;border-bottom:2px solid #84cc16;transform:rotate(-45deg);transition:transform .2s;"></span></summary>
+        <div style="padding:0 22px 20px;color:#aebccb;font-size:15.5px;line-height:1.6;">Absolutely. We run regular interstate routes between Sydney, Melbourne, Brisbane, the Gold Coast, Canberra and beyond. Ask about backloading to share a truck and save.</div>
+      </details>
+      <details style="background:#0e1f30;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;list-style:none;"><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">What does it cost?</span><span data-chev style="flex:none;width:14px;height:14px;border-right:2px solid #84cc16;border-bottom:2px solid #84cc16;transform:rotate(-45deg);transition:transform .2s;"></span></summary>
+        <div style="padding:0 22px 20px;color:#aebccb;font-size:15.5px;line-height:1.6;">Local moves are priced by crew size and hours; interstate by volume and distance. We give you a clear quote up front with no hidden fees — what we quote is what you pay.</div>
+      </details>
+      <details style="background:#0e1f30;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;list-style:none;"><span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;color:#fff;">Do you supply boxes &amp; packing?</span><span data-chev style="flex:none;width:14px;height:14px;border-right:2px solid #84cc16;border-bottom:2px solid #84cc16;transform:rotate(-45deg);transition:transform .2s;"></span></summary>
+        <div style="padding:0 22px 20px;color:#aebccb;font-size:15.5px;line-height:1.6;">We bring blankets, straps and trolleys on every job. Full packing service and boxes are available as an add-on — just let us know when you book.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA STRIP ===================== -->
+<section style="background:linear-gradient(135deg,#65a30d,#84cc16);padding:48px 24px;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;">
+    <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(28px,4vw,44px);text-transform:uppercase;color:#0a1521;margin:0;letter-spacing:-.5px;line-height:.95;">Ready to mooove?<br>Let's get you a price today.</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;">
+      <a href="#quote" style="background:#0a1521;color:#fff;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;padding:15px 28px;border-radius:10px;">FREE QUOTE</a>
+      <a href="https://wa.me/61410342539" target="_blank" style="background:#fff;color:#0a1521;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:20px;padding:15px 28px;border-radius:10px;">WHATSAPP US</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer style="background:#070f18;padding:56px 24px 30px;border-top:1px solid rgba(255,255,255,.06);">
+  <div style="max-width:1220px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:34px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);">
+      <div>
+        <span style="display:flex;align-items:center;gap:7px;margin-bottom:14px;">
+          <span style="display:inline-block;width:28px;height:20px;background:linear-gradient(135deg,#a3e635,#65a30d);clip-path:polygon(0 100%,55% 100%,100% 0,45% 0);"></span>
+          <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:28px;color:#fff;line-height:.8;">MO<span style="color:#84cc16;">OO</span>VE</span>
+        </span>
+        <p style="color:#7d93a8;font-size:14.5px;line-height:1.6;margin:0 0 14px;max-width:260px;">Fast, reliable and affordable removals, relocations and furniture logistics — right across Australia.</p>
+        <div style="display:flex;gap:14px;">
+          <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:15px;color:#84cc16;">Fast</span>
+          <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:15px;color:#84cc16;">Reliable</span>
+          <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:15px;color:#84cc16;">Affordable</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Barlow Condensed';font-weight:800;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin:0 0 16px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#services" style="color:#9fb0c0;font-size:14.5px;">Home &amp; Office Removals</a>
+          <a href="#services" style="color:#9fb0c0;font-size:14.5px;">Interstate Relocations</a>
+          <a href="#services" style="color:#9fb0c0;font-size:14.5px;">Furniture Logistics</a>
+          <a href="#areas" style="color:#9fb0c0;font-size:14.5px;">Service Areas</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Barlow Condensed';font-weight:800;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin:0 0 16px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#how" style="color:#9fb0c0;font-size:14.5px;">How it works</a>
+          <a href="#gallery" style="color:#9fb0c0;font-size:14.5px;">Gallery</a>
+          <a href="#reviews" style="color:#9fb0c0;font-size:14.5px;">Reviews</a>
+          <a href="#faq" style="color:#9fb0c0;font-size:14.5px;">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Barlow Condensed';font-weight:800;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:#fff;margin:0 0 16px;">Get in touch</h4>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="tel:+61410342539" style="display:flex;align-items:center;gap:9px;color:#dbe6f0;font-weight:600;font-size:15px;"><span style="color:#84cc16;">📞</span>(+61) 0410 342 539</a>
+          <a href="mailto:officemooove@gmail.com" style="display:flex;align-items:center;gap:9px;color:#dbe6f0;font-weight:600;font-size:15px;"><span style="color:#84cc16;">✉️</span>officemooove@gmail.com</a>
+          <a href="https://instagram.com/wemoooveyou" target="_blank" style="display:flex;align-items:center;gap:9px;color:#dbe6f0;font-weight:600;font-size:15px;"><span style="color:#84cc16;">📷</span>@wemoooveyou</a>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;">
+      <span style="color:#5d7488;font-size:13px;">© 2026 Mooove Removals. All rights reserved.</span>
+      <span style="color:#5d7488;font-size:13px;">Servicing Sydney · Melbourne · Brisbane · Australia-wide</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING WHATSAPP ===================== -->
+<a href="https://wa.me/61410342539" target="_blank" aria-label="WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.45);animation:mv-pulse 2.4s infinite;">
+  <span style="font-family:'Barlow Condensed';font-weight:900;color:#fff;font-size:30px;line-height:1;">✆</span>
+</a>
+
+<script>
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name = document.getElementById('f-name').value;
+  var phone = document.getElementById('f-phone').value;
+  var from = document.getElementById('f-from').value;
+  var to = document.getElementById('f-to').value;
+  var date = document.getElementById('f-date').value;
+  var size = document.getElementById('f-size').value;
+  var details = document.getElementById('f-details').value;
+
+  function L(label, val) { return val ? label + ': ' + val + '\n' : ''; }
+  var msg = "Hi Mooove Removals! I'd like a free quote.\n\n" +
+    L('Name', name) + L('Phone', phone) + L('From', from) +
+    L('To', to) + L('Date', date) + L('Move size', size) +
+    L('Details', details);
+
+  window.open('https://wa.me/61410342539?text=' + encodeURIComponent(msg), '_blank');
+
+  document.getElementById('quote-form-container').innerHTML =
+    '<div style="text-align:center;padding:30px 10px;">' +
+    '<div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#a3e635,#65a30d);display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 18px;">✓</div>' +
+    '<h3 style="font-family:Barlow Condensed;font-style:italic;font-weight:900;font-size:30px;text-transform:uppercase;color:#fff;margin:0 0 10px;">Sent! Check WhatsApp</h3>' +
+    '<p style="color:#aebccb;font-size:16px;line-height:1.55;margin:0 auto;max-width:340px;">We\'ve opened WhatsApp with your details. Hit send and we\'ll get back to you with a price ASAP.</p>' +
+    '</div>';
+});
+</script>
+
+</body>
+</html>
