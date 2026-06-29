@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mooove Removals — Fast, Reliable & Affordable Removals Australia-Wide</title>
+<title>Mooove Removals — Fast, Reliable & Affordable Removals Sydney</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -21,13 +21,28 @@ input,select,textarea,button{font-family:inherit;}
 
 details[open] [data-chev]{transform:rotate(45deg) !important;}
 
-/* Mobile */
+/* Tablet */
 @media(max-width:880px){
   .desktop-nav{display:none !important;}
   .hamburger{display:flex !important;}
   .hero-grid{grid-template-columns:1fr !important;}
   .hero-art{order:-1 !important;}
   .split{grid-template-columns:1fr !important;}
+}
+/* Mobile */
+@media(max-width:600px){
+  .hero-art .float-badge{left:8px !important;bottom:-14px !important;}
+  .hero-art .star-badge{right:8px !important;top:10px !important;}
+  .gallery-grid{grid-template-columns:1fr 1fr !important;}
+  .gallery-grid img:first-child{grid-row:span 1 !important;}
+  .gallery-grid img:last-child{grid-column:span 2 !important;}
+  .quote-form-grid{grid-template-columns:1fr !important;}
+  .cta-strip{text-align:center;}
+  .cta-strip h2{font-size:28px !important;}
+  .trust-bar{justify-content:center !important;text-align:center;}
+  .footer-grid{grid-template-columns:1fr !important;text-align:center;}
+  .footer-grid div{align-items:center;}
+  .footer-bottom{justify-content:center !important;text-align:center;}
 }
 </style>
 </head>
@@ -111,11 +126,11 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
         <div style="position:relative;z-index:1;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 70px rgba(0,0,0,.5);background:#0c1928;">
           <img src="images/photo1.jpg" alt="Mooove Removals truck loaded and ready" style="width:100%;height:380px;display:block;object-fit:cover;">
         </div>
-        <div style="position:absolute;z-index:2;left:-14px;bottom:-22px;background:#0c1928;border:1px solid rgba(132,204,22,.35);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px rgba(0,0,0,.45);animation:mv-float 5s ease-in-out infinite;">
+        <div class="float-badge" style="position:absolute;z-index:2;left:-14px;bottom:-22px;background:#0c1928;border:1px solid rgba(132,204,22,.35);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px rgba(0,0,0,.45);animation:mv-float 5s ease-in-out infinite;">
           <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:40px;color:#84cc16;line-height:1;">3+</span>
           <span style="font-weight:600;font-size:13.5px;line-height:1.25;color:#c2d0dc;">years moving<br>Aussie families</span>
         </div>
-        <div style="position:absolute;z-index:2;right:-12px;top:18px;background:#0c1928;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:11px 15px;box-shadow:0 14px 32px rgba(0,0,0,.45);">
+        <div class="star-badge" style="position:absolute;z-index:2;right:-12px;top:18px;background:#0c1928;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:11px 15px;box-shadow:0 14px 32px rgba(0,0,0,.45);">
           <div style="color:#fbbf24;font-size:15px;letter-spacing:2px;">★★★★★</div>
           <div style="font-weight:600;font-size:12px;color:#aebccb;margin-top:2px;">Rated by 300+ movers</div>
         </div>
@@ -127,7 +142,7 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
 
 <!-- ===================== TRUST BAR ===================== -->
 <div style="background:#0c1928;border-bottom:1px solid rgba(255,255,255,.06);">
-  <div style="max-width:1220px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;">
+  <div class="trust-bar" style="max-width:1220px;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;">
     <span style="font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:18px;color:#7d93a8;text-transform:uppercase;letter-spacing:1px;">Fully insured &amp; covered</span>
     <span style="font-weight:600;color:#8ba0b3;font-size:15px;">Local crews</span>
     <span style="font-weight:600;color:#8ba0b3;font-size:15px;">No hidden fees</span>
@@ -259,7 +274,7 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
       </div>
       <p style="color:#7d93a8;font-size:13.5px;max-width:320px;margin:0;">Photos from our recent jobs across Sydney.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));grid-auto-rows:200px;gap:14px;">
+    <div class="gallery-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));grid-auto-rows:200px;gap:14px;">
       <img src="images/photo2.jpg" alt="Sofa wrapped and protected" style="width:100%;height:100%;grid-row:span 2;display:block;object-fit:cover;border-radius:14px;">
       <img src="images/photo1.jpg" alt="Truck loaded with furniture" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
       <img src="images/photo3.jpg" alt="Table wrapped for moving" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
@@ -354,15 +369,15 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
 
       <div id="quote-form-container" style="background:#0e1f30;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.4);">
         <form id="quoteForm" style="display:flex;flex-direction:column;gap:14px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div class="quote-form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">YOUR NAME</span><input id="f-name" placeholder="Jane Doe" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
             <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">PHONE</span><input id="f-phone" placeholder="0410 000 000" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div class="quote-form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">MOVING FROM</span><input id="f-from" placeholder="Suburb / postcode" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
             <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">MOVING TO</span><input id="f-to" placeholder="Suburb / postcode" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div class="quote-form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">PREFERRED DATE</span><input id="f-date" type="date" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;color-scheme:dark;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></label>
             <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:12.5px;font-weight:600;color:#9fb0c0;letter-spacing:.5px;">MOVE SIZE</span><select id="f-size" style="background:#0a1521;border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:12px 14px;color:#fff;font-size:15px;outline:none;" onfocus="this.style.borderColor='#84cc16'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"><option>Few items / furniture</option><option>Studio / 1 Bedroom</option><option selected>2 Bedroom</option><option>3 Bedroom</option><option>4+ Bedroom</option><option>Office / commercial</option></select></label>
           </div>
@@ -408,7 +423,7 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
 </section>
 
 <!-- ===================== CTA STRIP ===================== -->
-<section style="background:linear-gradient(135deg,#65a30d,#84cc16);padding:48px 24px;">
+<section class="cta-strip" style="background:linear-gradient(135deg,#65a30d,#84cc16);padding:48px 24px;">
   <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;">
     <h2 style="font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(28px,4vw,44px);text-transform:uppercase;color:#0a1521;margin:0;letter-spacing:-.5px;line-height:.95;">Ready to mooove?<br>Let's get you a price today.</h2>
     <div style="display:flex;flex-wrap:wrap;gap:14px;">
@@ -421,7 +436,7 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
 <!-- ===================== FOOTER ===================== -->
 <footer style="background:#070f18;padding:56px 24px 30px;border-top:1px solid rgba(255,255,255,.06);">
   <div style="max-width:1220px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:34px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);">
+    <div class="footer-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:34px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);">
       <div>
         <span style="display:flex;align-items:center;gap:7px;margin-bottom:14px;">
           <span style="display:inline-block;width:28px;height:20px;background:linear-gradient(135deg,#a3e635,#65a30d);clip-path:polygon(0 100%,55% 100%,100% 0,45% 0);"></span>
@@ -461,7 +476,7 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
         </div>
       </div>
     </div>
-    <div style="padding-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;">
+    <div class="footer-bottom" style="padding-top:22px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;">
       <span style="color:#5d7488;font-size:13px;">© 2026 Mooove Removals. All rights reserved.</span>
       <span style="color:#5d7488;font-size:13px;">Servicing Bondi · Surry Hills · Paddington · Manly · All Sydney suburbs</span>
     </div>
