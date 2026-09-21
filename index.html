@@ -185,9 +185,9 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
 /* Mobile */
 @media(max-width:600px){
   .hero-art .star-badge{right:8px !important;top:10px !important;}
-  .gallery-grid{grid-template-columns:1fr 1fr !important;}
-  .gallery-grid img:first-child{grid-row:span 1 !important;}
-  .gallery-grid img:last-child{grid-column:span 2 !important;}
+  .gallery-grid{grid-template-columns:1fr 1fr !important;grid-auto-rows:180px !important;}
+  .gallery-grid img{grid-row:span 1 !important;grid-column:span 1 !important;}
+  .gallery-grid img.gallery-wide{grid-column:span 2 !important;}
   .quote-form-grid{grid-template-columns:1fr !important;}
   .quote-send-row{grid-template-columns:1fr !important;}
   .cta-strip{text-align:center;}
@@ -425,8 +425,8 @@ details[open] [data-chev]{transform:rotate(45deg) !important;}
       <img src="images/photo16.jpg" alt="Labelled fragile boxes stacked in a Sydney storage unit" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
       <img src="images/photo19.jpg" alt="Sideboard blanket-wrapped for transport during a Sydney removal" style="width:100%;height:100%;display:block;object-fit:cover;border-radius:14px;">
       <img src="images/photo18.jpg" alt="Boxes packed into a storage module by Mooove Removals" style="width:100%;height:100%;grid-row:span 2;display:block;object-fit:cover;border-radius:14px;">
-      <img src="images/photo20.jpg" alt="Wrapped sofa loaded and secured inside a removalist truck" style="width:100%;height:100%;grid-column:span 2;display:block;object-fit:cover;border-radius:14px;">
-      <img src="images/photo21.jpg" alt="Inside a Mooove Removals moving truck in Sydney" style="width:100%;height:100%;grid-column:span 2;display:block;object-fit:cover;border-radius:14px;">
+      <img class="gallery-wide" src="images/photo20.jpg" alt="Wrapped sofa loaded and secured inside a removalist truck" style="width:100%;height:100%;grid-column:span 2;display:block;object-fit:cover;border-radius:14px;">
+      <img class="gallery-wide" src="images/photo21.jpg" alt="Inside a Mooove Removals moving truck in Sydney" style="width:100%;height:100%;grid-column:span 2;display:block;object-fit:cover;border-radius:14px;">
     </div>
   </div>
 </section>
